@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
 import './components/Layout.css';
+import Breeds from './pages/Breeds';
+import { BrowserRouter as Router, Route, Switch, NavLink, HashRouter } from 'react-router-dom';
+import Gallery from './pages/Gallery';
 import Footer from './components/Footer';
 import Header from './components/Header';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Breeds from './pages/Breeds';
-import Gallery from './pages/Gallery';
 import Home from './pages/Home';
-
 
 class App extends Component {
   constructor() {
@@ -23,20 +22,22 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Header />
-        <main>
-          {this.props.children}
-        </main>
+        <HashRouter>
+          <Header />
+          <main>
+            <Router>
+              <Switch>
+                <Route exact path="/" component={Home} />
+                <Route path="/breeds" component={Breeds} />
+                <Route path="/gallery" component={Gallery} />
+              </Switch>
+            </Router>
+            {this.props.children}
+          </main>
+        </HashRouter>
         <Footer />
       </div>
     );
-  <Router>
-    <Switch>
-      <Route exact path="/" component={Home} />
-      <Route path="/breeds" component={Breeds} />
-      <Route path="/gallery" component={Gallery} />
-    </Switch>
-  </Router>
   }
 
 }

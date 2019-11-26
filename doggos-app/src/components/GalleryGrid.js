@@ -6,11 +6,11 @@ class GalleryGrid extends Component {
     return (
       <header className="GalleryGrid">
         <div className="container">
-          <h1>Gallery Page</h1>
+          <h2>Gallery Page</h2>
         </div>
-        </header>
-      );
-    }
+      </header>
+    );
+  }
 }
 
 export default GalleryGrid;

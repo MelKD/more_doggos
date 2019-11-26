@@ -4,7 +4,7 @@ import '../components/Layout.css';
 class Breeds extends Component {
   render() {
     return (
-      <div>
+      <div className="container">
         <h2>Breeds</h2>
       </div>
     );
