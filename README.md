@@ -14,7 +14,6 @@ Also used the Flatly theme from Bootswatch
 https://bootswatch.com/flatly/  
 
 
-
 ## To run locally
 Clone repo etc
 Change to app directory

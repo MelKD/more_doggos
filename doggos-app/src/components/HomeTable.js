@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './Layout.css';
+import '../styles/Layout.css';
 
 class HomeTable extends Component {
   handleChange(e) {
@@ -12,7 +12,6 @@ class HomeTable extends Component {
       <div className="HomeTable">
         <div className="container">
           <h1>{this.props.title}</h1>
-          <input value={this.props.title} onChange={this.handleChange.bind(this)} />
         </div>
       </div>
     );

@@ -1,16 +1,50 @@
 import React, { Component } from 'react';
-import './Layout.css';
+import '../styles/Layout.css';
 
 class HomeGrid extends Component {
+  constructor(props) {
+    super();
+    this.state = {
+      hasErrors: false,
+      dogs: null,
+    };
+  }
+
+  componentDidMount() {
+    this.loadData();
+  }
+    
+  loadData() {
+    fetch("https://dog.ceo/api/breeds/image/random/9")
+      .then(res => res.json())
+      .then(res => this.setState({dogs: res}))
+      .catch(() => this.setState({ hasErrors: true }))
+  }
+  
+  loadImages() {
+    return this.state.dogs.message.map(dog=> <img className="col-md-4" src={dog} />);
+  }
+    
   render() {
-    return (
-      <div className="HomeGrid">
-        <div className="container">
-          <h1>Grid of Images</h1>
-        </div>
+    if(!this.state.dogs){
+      return <div/>
+    }
+    else {
+      console.log("dogs ", this.state.dogs.message);
+      return (
+        <div className="HomeGrid">
+          <div className="container">
+            <h1>Grid of Images</h1>
+            <img src={this.state.dogs.message[0]} />
+            <div>
+              {this.loadImages()}
+              {console.log("reached 41")}
+            </div>
+          </div>
         </div>
       );
     }
+  }
 }
 
 export default HomeGrid;

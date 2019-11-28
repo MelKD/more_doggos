@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '../components/Layout.css';
+import '../styles/Layout.css';
 
 class Breeds extends Component {
   render() {

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './components/Layout.css';
+import './styles/Layout.css';
 import Breeds from './pages/Breeds';
 import { BrowserRouter as Router, Route, Switch, NavLink, HashRouter } from 'react-router-dom';
 import Gallery from './pages/Gallery';

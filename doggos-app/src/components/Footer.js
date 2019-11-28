@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import logo from '../logo.svg';
-import './Layout.css';
+import '../styles/Layout.css';
 
 class Footer extends Component {
   render() {
