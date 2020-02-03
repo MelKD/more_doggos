@@ -5,7 +5,7 @@ class Breeds extends Component {
   render() {
     return (
       <div className="container">
-        <h2>Breeds</h2>
+        <h3>Breeds</h3>
       </div>
     );
   }

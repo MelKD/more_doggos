@@ -19,6 +19,20 @@
   font-size: large;
 }
 
+
+.crop-img {
+  height: 250px;
+  overflow: hidden;
+  width: 30%;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.crop-img img {
+  height: auto;
+  object-position: center;
+}
+
 @keyframes Footer-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }

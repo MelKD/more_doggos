@@ -18,10 +18,11 @@ class Home extends Component {
 
   render() {
     return (
-      <div>
-        {/* <HomeGrid /> */}
+      <div className="container">
+        <h3>Just for fun!</h3>
+        <p>Because let's face it, dogs are the best!</p>
         <HomeGrid />
-        <HomeTable changeBreed={this.changeBreed.bind(this)} title={this.state.title} />  
+        {/* <HomeTable changeBreed={this.changeBreed.bind(this)} title={this.state.title} />   */}
       </div>
     );
   }

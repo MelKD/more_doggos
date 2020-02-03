@@ -22,7 +22,7 @@ class HomeGrid extends Component {
   }
   
   loadImages() {
-    return this.state.dogs.message.map(dog=> <img className="col-md-4" src={dog} />);
+    return this.state.dogs.message.map(dog=> <div className="crop-img col-md-4"><img className="" src={dog} /></div>);
   }
     
   render() {
@@ -34,8 +34,6 @@ class HomeGrid extends Component {
       return (
         <div className="HomeGrid">
           <div className="container">
-            <h1>Grid of Images</h1>
-            <img src={this.state.dogs.message[0]} />
             <div>
               {this.loadImages()}
               {console.log("reached 41")}
