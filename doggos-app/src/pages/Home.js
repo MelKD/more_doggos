@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import '../styles/Layout.css';
 import HomeGrid from '../components/HomeGrid';
-import HomeTable from '../components/HomeTable';
-import {Link} from "react-router-dom";
+// import {Link} from "react-router-dom";
 
 class Home extends Component {
   constructor() {
@@ -22,7 +21,10 @@ class Home extends Component {
         <h3>Just for fun!</h3>
         <p>Because let's face it, dogs are the best!</p>
         <HomeGrid />
-        {/* <HomeTable changeBreed={this.changeBreed.bind(this)} title={this.state.title} />   */}
+        <p>Looking for a specific breed? Click here!</p>
+        <button id="searchLinkBtn">
+          Search by Breed
+        </button> 
       </div>
     );
   }

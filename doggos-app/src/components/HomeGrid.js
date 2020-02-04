@@ -22,7 +22,7 @@ class HomeGrid extends Component {
   }
   
   loadImages() {
-    return this.state.dogs.message.map(dog=> <div className="crop-img col-md-4"><img className="" src={dog} /></div>);
+    return this.state.dogs.message.map(dog=> <div className="crop-img col-md-4"><img alt="Dog" className="" src={dog} /></div>);
   }
     
   render() {

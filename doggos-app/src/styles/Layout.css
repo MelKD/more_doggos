@@ -19,6 +19,9 @@
   font-size: large;
 }
 
+.container {
+  padding: 20px 0;
+}
 
 .crop-img {
   height: 250px;

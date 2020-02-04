@@ -22,14 +22,8 @@ class GalleryGrid extends Component {
   }
   
   loadImages() {
-    return this.state.dogs.message.map(dog=> <div className="crop-img col-md-4"><img className="" src={dog} /></div>);
+    return this.state.dogs.message.map((dog, index)=> <div className="crop-img col-md-4" key={index} ><img alt="Dog" className="" src={dog} /></div>);
   }
-
-  // To Do:
-  // Set autosuggest to select a breed to view images
-  // Need to fetch breed list to auto suggest and select
-  // from possible options to render images of a single 
-  // breed only
     
   render() {
     if(!this.state.dogs){
@@ -37,13 +31,13 @@ class GalleryGrid extends Component {
     }
     else {
       console.log("dogs ", this.state.dogs.message);
+      console.log("props", this.props);
       return (
         <div className="GalleryGrid">
           <div className="container">
-            <h3>Gallery</h3>
+          <h3>{this.props.breed}</h3>
             <div>
               {this.loadImages()}
-              {console.log("reached 41")}
             </div>
           </div>
         </div>
