@@ -15,14 +15,14 @@ class HomeGrid extends Component {
   }
     
   loadData() {
-    fetch("https://dog.ceo/api/breeds/image/random/9")
+    fetch("https://dog.ceo/api/breeds/image/random/6")
       .then(res => res.json())
       .then(res => this.setState({dogs: res}))
       .catch(() => this.setState({ hasErrors: true }))
   }
   
   loadImages() {
-    return this.state.dogs.message.map(dog=> <div className="crop-img col-md-4"><img alt="Dog" className="" src={dog} /></div>);
+    return this.state.dogs.message.map((dog, index) => <div key={index} className="crop-img col-md-4"><img alt="Dog" className="" src={dog} /></div>);
   }
     
   render() {
@@ -30,13 +30,11 @@ class HomeGrid extends Component {
       return <div/>
     }
     else {
-      console.log("dogs ", this.state.dogs.message);
       return (
         <div className="HomeGrid">
           <div className="container">
             <div>
-              {this.loadImages()}
-              {console.log("reached 41")}
+              {this.loadImages()}              
             </div>
           </div>
         </div>
