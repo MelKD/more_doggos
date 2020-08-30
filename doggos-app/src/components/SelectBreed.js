@@ -97,7 +97,6 @@ class SelectBreed extends Component {
   
   // TODO:
   // Get a blurb from Wikipedia about the dog type by selection (if one available)
-  // Scroll to search on page
   // Option to view full images etc
   
   renderSuggestions () {
@@ -119,6 +118,7 @@ class SelectBreed extends Component {
     if(!this.state.dogs){
       return(
         <div className="container">
+          <a name="searchByBreed" />
           <input 
             placeholder ={this.state.value}
             value={this.state.value} 
