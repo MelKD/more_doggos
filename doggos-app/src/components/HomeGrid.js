@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Masonry from 'react-masonry-css';
-// import Lightbox from 'react-image-lightbox';
 import '../styles/Layout.css';
 
 const breakpointColumnsObj = {
@@ -16,8 +15,6 @@ class HomeGrid extends Component {
     this.state = {
       hasErrors: false,
       dogs: null,
-      photoIndex: 0,
-      isOpen: false,
     };
   }
 
@@ -33,11 +30,10 @@ class HomeGrid extends Component {
   }
   
   loadImages() {
-    return this.state.dogs.message.map((dog, index) => <div key={index} className="crop-img"><img alt="Dog" className="" src={dog} onClick={() => this.setState({ isOpen: true })}/></div>);
+    return this.state.dogs.message.map((dog, index) => <div key={index} className="crop-img"><img alt="Dog" className="" src={dog} /></div>);
   }
     
   render() {
-    const { photoIndex, isOpen } = this.state;
     if(!this.state.dogs){
       return <div/>
     }
