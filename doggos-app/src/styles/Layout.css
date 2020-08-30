@@ -23,7 +23,7 @@
   padding: 20px 0;
 }
 
-.crop-img {
+/* .crop-img {
   height: 250px;
   overflow: hidden;
   width: 30%;
@@ -34,6 +34,28 @@
 .crop-img img {
   height: auto;
   object-position: center;
+} */
+
+/* Masonry grid css */
+.my-masonry-grid {
+  display: -webkit-box; /* Not needed if autoprefixing */
+  display: -ms-flexbox; /* Not needed if autoprefixing */
+  display: flex;
+  margin-left: -30px; /* gutter size offset */
+  width: auto;
+}
+.my-masonry-grid_column {
+  padding-left: 10px; /* gutter size */
+  background-clip: padding-box;
+}
+ 
+/* Style your items */
+.my-masonry-grid_column > .crop-img { /* change div to reference your elements you put in <Masonry> */
+  background: grey;
+  margin-bottom: 10px;
+}
+.my-masonry-grid_column > .crop-img img { 
+  max-width: 100%;
 }
 
 @keyframes Footer-logo-spin {

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import '../styles/Layout.css';
 import HomeGrid from '../components/HomeGrid';
+import Gallery from '../components/Gallery';
 import SelectBreed from '../components/SelectBreed';
 // import {Link} from "react-router-dom";
 

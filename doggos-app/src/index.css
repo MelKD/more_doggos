@@ -1,5 +1,32 @@
+/* Header styles */
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+
 body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+}
+.head-dog {
+  max-width: 170px;
+}
+
+.navbar-brand {
+  font-family: 'Acme', sans-serif;
+  font-size: 2em;
+  margin-left: 1em;
+  color: turquoise !important;
+}
+
+.Footer .container .col-md-6 {
+  display: inline-block;
+}
+
+.Footer-logo {
+  float: right;
+}
+
+.footer-react {
+  text-align: right;
+  display: inline-block;
+  width: 100%;
 }

@@ -8,13 +8,13 @@ class Footer extends Component {
       <footer className="Footer">
         <div className="container">
           <div className="col-md-6">
-            <p>GitHub</p>
-            <p>Twitter</p>
-            <p>LinkedIn</p>
+            <p><a href="https://github.com/MelKD/more_doggos" target="_blank">GitHub</a></p>
+            <p><a href="https://twitter.com/melissa_k__d" target="_blank">Twitter</a></p>
+            <p><a href="https://www.linkedin.com/in/melissakyd/" target="_blank">LinkedIn</a></p>
           </div>
           <div className="col-md-6">
             <img src={logo} className="Footer-logo" alt="logo" />
-            <p>Powered by React</p>
+            <p className="footer-react">Powered by React</p>
           </div>
         </div>
       </footer>
