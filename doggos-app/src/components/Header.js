@@ -6,7 +6,7 @@ class Header extends Component {
   render() {
     return (
       <header className="Header">
-        <nav className="navbar navbar-dark bg-primary" id="navbarResponsive">
+        <nav className="navbar navbar-expand-lg navbar-dark bg-primary" id="navbarResponsive">
           <div className="container">
             <img className="head-dog" alt="Dog Icon" src="boston-terrier.png" />
             <a className="navbar-brand" href="/">More Doggos, Please!</a>

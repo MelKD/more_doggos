@@ -21,7 +21,3 @@ Install Node modules (React requires Node >= 8.10 and npm >= 5.6 as at 26 Nov 20
     npm install
 Start localhost: 
     npm start
-
-NOTE: 
-May need to produce a yarn.lock file as this was removed from the repo.
-
