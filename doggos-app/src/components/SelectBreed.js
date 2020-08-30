@@ -1,5 +1,22 @@
 import React, { Component } from 'react';
+import Masonry from 'react-masonry-css';
 import '../styles/Layout.css';
+
+const breakpointColumnsObj = {
+  default: 4,
+  1100: 3,
+  700: 2,
+  500: 1
+};
+
+// const initialState = {
+//   suggestions: [],
+//   images: [],
+//   hasErrors: false,
+//   breeds: null,
+//   dogs: null,
+//   value: '',
+// };
 
 class SelectBreed extends Component {
   constructor(props) {
@@ -34,7 +51,9 @@ class SelectBreed extends Component {
     let suggestions = [];
     if(value.length > 0) {
       const regex = new RegExp(`^${value}`, 'i');
-      suggestions = this.state.breeds.sort().filter(v => regex.test(v));      
+      let allBreeds = [];
+      allBreeds = this.state.breeds;
+      suggestions = allBreeds.sort().filter(v => regex.test(v));      
     }  
     this.setState(() => ({suggestions}));    
   }
@@ -50,6 +69,16 @@ class SelectBreed extends Component {
     this.loadDogs();
   }
 
+  resetButtonClick () {
+    this.setState(() => ({
+      suggestions: [],
+      images: [],
+      hasErrors: false,
+      dogs: null,
+      value: '',
+    }));
+  }
+
   async loadDogs() {
     var type = this.state.value;
     var breed = type.toLowerCase();
@@ -63,15 +92,13 @@ class SelectBreed extends Component {
   }
   
   loadImages() {
-    return this.state.dogs.message.map((dog, index)=> <div className="crop-img col-md-4" key={index} ><img alt="Dog" className="" src={dog} /><p>{dog}</p></div>);
+    return this.state.dogs.message.map((dog, index)=> <div className="crop-img" key={index} ><img alt="Dog" className="" src={dog} /></div>);
   }
   
   // TODO:
   // Get a blurb from Wikipedia about the dog type by selection (if one available)
-  // Reset button to clear selection so can search for and display a different breed
   // Scroll to search on page
   // Option to view full images etc
-  // Tidy up styling (styled components?? ) to finish off
   
   renderSuggestions () {
     const { suggestions } = this.state;
@@ -93,11 +120,13 @@ class SelectBreed extends Component {
       return(
         <div className="container">
           <input 
+            placeholder ={this.state.value}
             value={this.state.value} 
             onChange={this.handleChange} 
             type="text"/>
-            <button onClick={() => this.handleButtonClick()}>Show breed!</button>
-            {this.renderSuggestions()}
+          <button className="turquoise" onClick={() => this.handleButtonClick()}>Show breed!</button>
+          <button onClick={() => this.resetButtonClick()}>Clear</button>
+          {this.renderSuggestions()}     
         </div>
       )
     }
@@ -106,14 +135,22 @@ class SelectBreed extends Component {
         <div className="container">
           <a name="searchByBreed" />
           <input 
+            placeholder ={this.state.value}
             value={this.state.value} 
             onChange={this.handleChange} 
             type="text"/>
-          <button onClick={() => this.handleButtonClick()}>Show breed!</button>
+          <button className="turquoise" onClick={() => this.handleButtonClick()}>Show breed!</button>
+          <button onClick={() => this.resetButtonClick()}>Clear</button>
             {this.renderSuggestions()}
           <div className="container Breed">
-            <h3>{this.state.value}</h3>
+            <h3 className="breed-type">{this.state.value}</h3>
+            <Masonry
+              breakpointCols={breakpointColumnsObj}
+              className="my-masonry-grid"
+              columnClassName="my-masonry-grid_column"
+            >
               {this.loadImages()}
+            </Masonry>
           </div>
         </div>
       )

@@ -55,7 +55,37 @@
   margin-bottom: 10px;
 }
 .my-masonry-grid_column > .crop-img img { 
-  max-width: 100%;
+  width: 100%;
+}
+
+.divider {
+  border-bottom: 1px solid #eee;
+  padding: 2em;
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 2em;
+}
+
+.dogList li {
+  text-transform: capitalize;
+}
+input {
+  text-transform: capitalize;
+}
+
+h3.breed-type {
+  text-transform: capitalize;
+}
+
+button {
+  border: 0;
+  margin-left: 1em;
+  padding: 10px;
+  border-radius: 8px;
+  color: #2C3E50;
+}
+button.turquoise {
+  background: turquoise;
 }
 
 @keyframes Footer-logo-spin {
