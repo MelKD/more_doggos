@@ -3,8 +3,12 @@
 Because really, who doesn't love dogs!
 
 ## In progress
-A React app displaying content sourced from the Dog.api and Wiki.api. Sort or filters dogs by breed. Click on a 'More doggos, please!' link and view lots of dog pics - perfect if you're having a bad day!
+A React app displaying content sourced from the Dog.api. Select dogs by breed and view of dog pics of your favourite breed - perfect if you're having a bad day!
 
+## View a demo
+View a demo of the site here: https://melissakyd.com/more-doggos
+
+## API and Styles
 APIs:
 https://dog.ceo/dog-api/
 
@@ -14,10 +18,4 @@ Also used the Flatly theme from Bootswatch
 https://bootswatch.com/flatly/  
 
 
-## To run locally
-Clone repo etc
-Change to app directory
-Install Node modules (React requires Node >= 8.10 and npm >= 5.6 as at 26 Nov 2019):
-    npm install
-Start localhost: 
-    npm start
+

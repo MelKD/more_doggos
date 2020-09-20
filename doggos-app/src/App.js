@@ -25,7 +25,8 @@ class App extends Component {
           <main>
             <Router>
               <Switch>
-                <Route exact path="/" component={Home} />
+                {/* <Route exact path="/" component={Home} /> */}
+                <Home/>
               </Switch>
             </Router>
             {this.props.children}
