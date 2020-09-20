@@ -8,7 +8,7 @@ Because really, who doesn't love dogs!
 This is still  work in progress, and I'll be updating this with additional functions for sorting/ filtering - as well as aiming to get information about the specific breeds.
 
 ## View a demo
-<img align="center" src="https://github.com/MelKD/more_doggos/more-doggos-app-image.png" />  
+<img align="center" src="https://github.com/MelKD/more_doggos/blob/master/more-doggos-app-image.png?raw=true" />  
 
 View a demo of the site here: https://melissakyd.com/more-doggos
 
