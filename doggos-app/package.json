@@ -1,6 +1,6 @@
 {
   "name": "doggos-app",
-  "version": "0.1.0",
+  "version": "1.0",
   "private": true,
   "dependencies": {
     "react": "^16.12.0",
@@ -9,7 +9,9 @@
     "react-masonry-css": "^1.0.14",
     "react-router-dom": "^5.1.2",
     "react-scripts": "^3.4.3",
-    "react-scroll": "^1.8.1"
+    "react-scroll": "^1.8.1",
+    "yargs-parser": ">=13.1.2",
+    "http-proxy": ">=1.18.1"
   },
   "devDependencies": {},
   "scripts": {
